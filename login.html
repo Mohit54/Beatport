@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>User Login</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+<style>
+body
+{
+background-image: url("13.jpg"); 
+  background-size:2000px 1000px;
+ background-repeat: no-repeat;
+}
+</style>
+</br></br></br></br></br>
+<pre>
+<form action="login.php" method="post" name="myForm"  >
+<font face="Tempus Sans ITC"><h1><center>LOGIN</center></h1>
+<div class="message"><?php if($message!="") { echo $message; } ?></div>
+<table border="0" cellpadding="15" cellspacing="1" width="700" align="center">
+<tr class="tableheader">
+<td align="center" colspan="2">Enter Login Details</td>
+</tr>
+<tr class="tablerow">
+<td align="right">Username</td>
+<td><input type="text" name="user_name"></td>
+</tr>
+<tr class="tablerow">
+<td align="right">Password</td>
+<td><input type="password" name="password"></td>
+</tr>
+<tr class="tableheader">
+<td align="center" colspan="2"><input type="submit" name="submit" value="Submit"></td>
+</tr>
+</table>
+</form>
+<form action="signup.html"><center>
+<h1><input type="submit" name="register" value="register"></h1>
+</center></form>
+</pre>
+<script>
+ function validate()
+      {
+      
+         if( document.myForm.user_name.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.myForm.name.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+        
+		  if( document.myForm.password.value == "" )
+         {
+            alert( "Please provide your password!" );
+            document.myForm.password.focus() ;
+            return false;
+         }
+		 
+         
+         return( true );
+      }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<title>Register</title>
+<style type="text/css">
+h3{font-family:arial;color:white;font-size:17px;}
+span{font-size:13px; color:black;}
+</style>
+<pre>
+<form action="signup.php" method="post" name="myForm" onsubmit="return(validate());" >
+<center>
+</br></br></br></br></br></br></br>
+<font face="Tempus Sans ITC"><h1><center>PLEASE DO REGISTRATION</center></h1>
+<h1>username:<input type="text" name="user_name"/></h1></br></br>
+<h1>email-id:<input type="email" name="email"/></h1></br></br>
+<h1>password:<input type="password" name="password"/></h1></br>
+<h1><input type="submit" value="Submit"/></h1></br></br>
+</center>
+</form>
+</pre>
+<script>
+ function validate()
+      {
+      
+         if( document.myForm.user_name.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.myForm.name.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+          
+		  if( document.myForm.password.value == "" )
+         {
+            alert( "Please provide your password!" );
+            document.myForm.password.focus() ;
+            return false;
+         }
+		 
+         
+         return( true );
+      }
+
+</script>
+</head>
+<style>
+body
+{
+background-image: url("13.jpg"); 
+  background-size:2000px 1000px;
+ background-repeat: no-repeat;
+}
+</style>
+</body>
+</html>
